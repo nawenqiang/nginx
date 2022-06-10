@@ -1,0 +1,80 @@
+ngx_channel.c:    rev->log = cycle->log;
+ngx_channel.c:    rev->channel = 1;
+ngx_readv_chain.c:                       rev->pending_eof, rev->available, rev->kq_errno);
+ngx_readv_chain.c:        if (rev->available == 0) {
+ngx_readv_chain.c:            if (rev->pending_eof) {
+ngx_readv_chain.c:                rev->ready = 0;
+ngx_readv_chain.c:                rev->eof = 1;
+ngx_readv_chain.c:                ngx_log_error(NGX_LOG_INFO, c->log, rev->kq_errno,
+ngx_readv_chain.c:                if (rev->kq_errno) {
+ngx_readv_chain.c:                    rev->error = 1;
+ngx_readv_chain.c:                    ngx_set_socket_errno(rev->kq_errno);
+ngx_readv_chain.c:                       rev->pending_eof, rev->available);
+ngx_readv_chain.c:        if (rev->available == 0 && !rev->pending_eof) {
+ngx_readv_chain.c:            rev->ready = 0;
+ngx_readv_chain.c:            rev->eof = 1;
+ngx_readv_chain.c:                rev->available = 0;
+ngx_readv_chain.c:                rev->available -= n;
+ngx_readv_chain.c:                 * rev->available may be negative here because some additional
+ngx_readv_chain.c:                if (rev->available <= 0) {
+ngx_readv_chain.c:                    if (!rev->pending_eof) {
+ngx_readv_chain.c:                        rev->ready = 0;
+ngx_readv_chain.c:                    rev->available = 0;
+ngx_readv_chain.c:            if (rev->available >= 0) {
+ngx_readv_chain.c:                rev->available -= n;
+ngx_readv_chain.c:                 * negative rev->available means some additional bytes
+ngx_readv_chain.c:                if (rev->available < 0) {
+ngx_readv_chain.c:                    rev->available = 0;
+ngx_readv_chain.c:                    rev->ready = 0;
+ngx_readv_chain.c:                               "readv: avail:%d", rev->available);
+ngx_readv_chain.c:                if (ngx_socket_nread(c->fd, &rev->available) == -1) {
+ngx_readv_chain.c:                               "readv: avail:%d", rev->available);
+ngx_readv_chain.c:                    if (!rev->pending_eof) {
+ngx_readv_chain.c:                        rev->ready = 0;
+ngx_readv_chain.c:                    rev->available = 0;
+ngx_readv_chain.c:                rev->ready = 0;
+ngx_readv_chain.c:    rev->ready = 0;
+ngx_recv.c:                       rev->pending_eof, rev->available, rev->kq_errno);
+ngx_recv.c:        if (rev->available == 0) {
+ngx_recv.c:            if (rev->pending_eof) {
+ngx_recv.c:                rev->ready = 0;
+ngx_recv.c:                rev->eof = 1;
+ngx_recv.c:                if (rev->kq_errno) {
+ngx_recv.c:                    rev->error = 1;
+ngx_recv.c:                    ngx_set_socket_errno(rev->kq_errno);
+ngx_recv.c:                    return ngx_connection_error(c, rev->kq_errno,
+ngx_recv.c:                rev->ready = 0;
+ngx_recv.c:                       rev->pending_eof, rev->available);
+ngx_recv.c:        if (rev->available == 0 && !rev->pending_eof) {
+ngx_recv.c:            rev->ready = 0;
+ngx_recv.c:            rev->ready = 0;
+ngx_recv.c:            rev->eof = 1;
+ngx_recv.c:                rev->available = 0;
+ngx_recv.c:                rev->available -= n;
+ngx_recv.c:                 * rev->available may be negative here because some additional
+ngx_recv.c:                if (rev->available <= 0) {
+ngx_recv.c:                    if (!rev->pending_eof) {
+ngx_recv.c:                        rev->ready = 0;
+ngx_recv.c:                    rev->available = 0;
+ngx_recv.c:            if (rev->available >= 0) {
+ngx_recv.c:                rev->available -= n;
+ngx_recv.c:                 * negative rev->available means some additional bytes
+ngx_recv.c:                if (rev->available < 0) {
+ngx_recv.c:                    rev->available = 0;
+ngx_recv.c:                    rev->ready = 0;
+ngx_recv.c:                               "recv: avail:%d", rev->available);
+ngx_recv.c:                if (ngx_socket_nread(c->fd, &rev->available) == -1) {
+ngx_recv.c:                               "recv: avail:%d", rev->available);
+ngx_recv.c:                    if (!rev->pending_eof) {
+ngx_recv.c:                        rev->ready = 0;
+ngx_recv.c:                    rev->available = 0;
+ngx_recv.c:                rev->ready = 0;
+ngx_recv.c:    rev->ready = 0;
+ngx_recv.c:        rev->error = 1;
+ngx_udp_recv.c:                rev->available -= n;
+ngx_udp_recv.c:                 * rev->available may be negative here because some additional
+ngx_udp_recv.c:                if (rev->available <= 0) {
+ngx_udp_recv.c:                    rev->ready = 0;
+ngx_udp_recv.c:                    rev->available = 0;
+ngx_udp_recv.c:    rev->ready = 0;
+ngx_udp_recv.c:        rev->error = 1;

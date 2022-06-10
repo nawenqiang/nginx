@@ -1,0 +1,42 @@
+ngx_event_accept.c:            rev->ready = 1;
+ngx_event_accept.c:            rev->ready = 1;
+ngx_event_accept.c:            rev->available = 1;
+ngx_event_accept.c:        rev->log = log;
+ngx_event_acceptex.c:    c = rev->data;
+ngx_event_acceptex.c:    if (rev->ovlp.error) {
+ngx_event_acceptex.c:        ngx_log_error(NGX_LOG_CRIT, c->log, rev->ovlp.error,
+ngx_event_acceptex.c:        c->buffer->last += rev->available;
+ngx_event_acceptex.c:        rev->ovlp.event = rev;
+ngx_event_acceptex.c:        rev->handler = ngx_event_acceptex;
+ngx_event_acceptex.c:        rev->ready = 1;
+ngx_event_acceptex.c:        rev->log = c->log;
+ngx_event_acceptex.c:                         &rcvd, (LPOVERLAPPED) &rev->ovlp)
+ngx_event.c:        if (!rev->active && !rev->ready) {
+ngx_event.c:        if (!rev->active && !rev->ready) {
+ngx_event.c:        if (rev->active && (rev->ready || (flags & NGX_CLOSE_EVENT))) {
+ngx_event.c:        if (!rev->active && !rev->ready) {
+ngx_event.c:        if (rev->oneshot && rev->ready) {
+ngx_event.c:        rev->log = c->log;
+ngx_event.c:        rev->accept = 1;
+ngx_event.c:        rev->deferred_accept = ls[i].deferred_accept;
+ngx_event.c:            rev->handler = ngx_event_acceptex;
+ngx_event.c:            rev->handler = ngx_event_accept;
+ngx_event.c:        rev->handler = (c->type == SOCK_STREAM) ? ngx_event_accept
+ngx_event_connect.c:    rev->log = pc->log;
+ngx_event_connect.c:        rev->ready = 1;
+ngx_event_openssl.c:    c = rev->data;
+ngx_event_openssl_stapling.c:    c = rev->data;
+ngx_event_openssl_stapling.c:    ngx_log_debug0(NGX_LOG_DEBUG_EVENT, rev->log, 0,
+ngx_event_openssl_stapling.c:    if (rev->timedout) {
+ngx_event_openssl_stapling.c:        ngx_log_error(NGX_LOG_ERR, rev->log, NGX_ETIMEDOUT,
+ngx_event_pipe.c:        flags = (rev->eof || rev->error) ? NGX_CLOSE_EVENT : 0;
+ngx_event_pipe.c:        if (!rev->delayed) {
+ngx_event_pipe.c:            if (rev->active && !rev->ready) {
+ngx_event_pipe.c:            } else if (rev->timer_set) {
+ngx_event_udp.c:            rev->ready = 1;
+ngx_event_udp.c:            rev->active = 0;
+ngx_event_udp.c:            rev->handler(rev);
+ngx_event_udp.c:            rev->ready = 0;
+ngx_event_udp.c:            rev->active = 1;
+ngx_event_udp.c:        rev->active = 1;
+ngx_event_udp.c:        rev->log = log;

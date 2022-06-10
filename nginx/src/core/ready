@@ -1,0 +1,24 @@
+ngx_connection.c:    instance = rev->instance;
+ngx_connection.c:    rev->instance = !instance;
+ngx_connection.c:    rev->index = NGX_INVALID_INDEX;
+ngx_connection.c:    rev->data = c;
+ngx_queue.h:    (x)->prev->next = x;                                                      \
+ngx_queue.h:    (x)->prev->next = (x)->next;                                              \
+ngx_queue.h:    (x)->prev->next = (x)->next
+ngx_queue.h:    (n)->prev->next = n;                                                      \
+ngx_queue.h:    (h)->prev->next = h;                                                      \
+ngx_queue.h:    (h)->prev->next = (n)->next;                                              \
+ngx_queue.h:    (h)->prev->next = h;
+ngx_resolver.c:    c = rev->data;
+ngx_resolver.c:    } while (rev->ready);
+ngx_resolver.c:    c = rev->data;
+ngx_resolver.c:    while (rev->ready) {
+ngx_resolver.c:    rev->log = &rec->log;
+ngx_resolver.c:    rev->log = &rec->log;
+ngx_resolver.c:        rev->ready = 1;
+ngx_slab.c:                            prev->next = page->next;
+ngx_slab.c:                    prev->next = page->next;
+ngx_slab.c:                    prev->next = page->next;
+ngx_slab.c:        prev->next = page->next;
+ngx_slab.c:                prev->next = join->next;
+ngx_slab.c:                prev->next = join->next;

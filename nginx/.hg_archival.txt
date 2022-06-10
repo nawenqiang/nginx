@@ -1,0 +1,4 @@
+repo: 4eff17414a4378feaba42876e0d3a6a50646cdee
+node: 39a422cf9876828e917c3b75747a6c276100976d
+branch: stable-1.20
+tag: release-1.20.1

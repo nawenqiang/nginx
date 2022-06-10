@@ -1,0 +1,159 @@
+ngx_http_copy_filter_module.c:    ngx_conf_merge_bufs_value(conf->bufs, prev->bufs, 2, 32768);
+ngx_http_core_module.c:                              prev->connection_pool_size, 64 * sizeof(void *));
+ngx_http_core_module.c:                              prev->request_pool_size, 4096);
+ngx_http_core_module.c:                              prev->client_header_timeout, 60000);
+ngx_http_core_module.c:                              prev->client_header_buffer_size, 1024);
+ngx_http_core_module.c:                              prev->large_client_header_buffers,
+ngx_http_core_module.c:                              prev->ignore_invalid_headers, 1);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->merge_slashes, prev->merge_slashes, 1);
+ngx_http_core_module.c:                              prev->underscores_in_headers, 0);
+ngx_http_core_module.c:        conf->alias = prev->alias;
+ngx_http_core_module.c:        conf->root = prev->root;
+ngx_http_core_module.c:        conf->root_lengths = prev->root_lengths;
+ngx_http_core_module.c:        conf->root_values = prev->root_values;
+ngx_http_core_module.c:        if (prev->root.data == NULL) {
+ngx_http_core_module.c:        conf->post_action = prev->post_action;
+ngx_http_core_module.c:                              prev->types_hash_max_size, 1024);
+ngx_http_core_module.c:                              prev->types_hash_bucket_size, 64);
+ngx_http_core_module.c:    if (prev->types && prev->types_hash.buckets == NULL) {
+ngx_http_core_module.c:        types_hash.hash = &prev->types_hash;
+ngx_http_core_module.c:        if (ngx_hash_init(&types_hash, prev->types->elts, prev->types->nelts)
+ngx_http_core_module.c:        conf->types = prev->types;
+ngx_http_core_module.c:        conf->types_hash = prev->types_hash;
+ngx_http_core_module.c:        if (prev->error_log) {
+ngx_http_core_module.c:            conf->error_log = prev->error_log;
+ngx_http_core_module.c:    if (conf->error_pages == NULL && prev->error_pages) {
+ngx_http_core_module.c:        conf->error_pages = prev->error_pages;
+ngx_http_core_module.c:                              prev->default_type, "text/plain");
+ngx_http_core_module.c:                              prev->client_max_body_size, 1 * 1024 * 1024);
+ngx_http_core_module.c:                              prev->client_body_buffer_size,
+ngx_http_core_module.c:                              prev->client_body_timeout, 60000);
+ngx_http_core_module.c:                              prev->keepalive_disable,
+ngx_http_core_module.c:    ngx_conf_merge_uint_value(conf->satisfy, prev->satisfy,
+ngx_http_core_module.c:    ngx_conf_merge_msec_value(conf->auth_delay, prev->auth_delay, 0);
+ngx_http_core_module.c:    ngx_conf_merge_uint_value(conf->if_modified_since, prev->if_modified_since,
+ngx_http_core_module.c:    ngx_conf_merge_uint_value(conf->max_ranges, prev->max_ranges,
+ngx_http_core_module.c:                              prev->client_body_in_file_only,
+ngx_http_core_module.c:                              prev->client_body_in_single_buffer, 0);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->internal, prev->internal, 0);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->sendfile, prev->sendfile, 0);
+ngx_http_core_module.c:                              prev->sendfile_max_chunk, 0);
+ngx_http_core_module.c:                              prev->subrequest_output_buffer_size,
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->aio, prev->aio, NGX_HTTP_AIO_OFF);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->aio_write, prev->aio_write, 0);
+ngx_http_core_module.c:    ngx_conf_merge_ptr_value(conf->thread_pool, prev->thread_pool, NULL);
+ngx_http_core_module.c:    ngx_conf_merge_ptr_value(conf->thread_pool_value, prev->thread_pool_value,
+ngx_http_core_module.c:    ngx_conf_merge_size_value(conf->read_ahead, prev->read_ahead, 0);
+ngx_http_core_module.c:    ngx_conf_merge_off_value(conf->directio, prev->directio,
+ngx_http_core_module.c:    ngx_conf_merge_off_value(conf->directio_alignment, prev->directio_alignment,
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->tcp_nopush, prev->tcp_nopush, 0);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->tcp_nodelay, prev->tcp_nodelay, 1);
+ngx_http_core_module.c:    ngx_conf_merge_msec_value(conf->send_timeout, prev->send_timeout, 60000);
+ngx_http_core_module.c:    ngx_conf_merge_size_value(conf->send_lowat, prev->send_lowat, 0);
+ngx_http_core_module.c:    ngx_conf_merge_size_value(conf->postpone_output, prev->postpone_output,
+ngx_http_core_module.c:        conf->limit_rate = prev->limit_rate;
+ngx_http_core_module.c:        conf->limit_rate_after = prev->limit_rate_after;
+ngx_http_core_module.c:                              prev->keepalive_time, 3600000);
+ngx_http_core_module.c:                              prev->keepalive_timeout, 75000);
+ngx_http_core_module.c:                              prev->keepalive_header, 0);
+ngx_http_core_module.c:                              prev->keepalive_requests, 1000);
+ngx_http_core_module.c:                              prev->lingering_close, NGX_HTTP_LINGERING_ON);
+ngx_http_core_module.c:                              prev->lingering_time, 30000);
+ngx_http_core_module.c:                              prev->lingering_timeout, 5000);
+ngx_http_core_module.c:                              prev->resolver_timeout, 30000);
+ngx_http_core_module.c:        if (prev->resolver == NULL) {
+ngx_http_core_module.c:            prev->resolver = ngx_resolver_create(cf, NULL, 0);
+ngx_http_core_module.c:            if (prev->resolver == NULL) {
+ngx_http_core_module.c:        conf->resolver = prev->resolver;
+ngx_http_core_module.c:                              prev->client_body_temp_path,
+ngx_http_core_module.c:                              prev->reset_timedout_connection, 0);
+ngx_http_core_module.c:                              prev->absolute_redirect, 1);
+ngx_http_core_module.c:                              prev->server_name_in_redirect, 0);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->port_in_redirect, prev->port_in_redirect, 1);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->msie_padding, prev->msie_padding, 1);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->msie_refresh, prev->msie_refresh, 0);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->log_not_found, prev->log_not_found, 1);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->log_subrequest, prev->log_subrequest, 0);
+ngx_http_core_module.c:                              prev->recursive_error_pages, 0);
+ngx_http_core_module.c:                              prev->chunked_transfer_encoding, 1);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->etag, prev->etag, 1);
+ngx_http_core_module.c:    ngx_conf_merge_uint_value(conf->server_tokens, prev->server_tokens,
+ngx_http_core_module.c:                              prev->open_file_cache, NULL);
+ngx_http_core_module.c:                              prev->open_file_cache_valid, 60);
+ngx_http_core_module.c:                              prev->open_file_cache_min_uses, 1);
+ngx_http_core_module.c:                              prev->open_file_cache_errors, 0);
+ngx_http_core_module.c:                              prev->open_file_cache_events, 0);
+ngx_http_core_module.c:    ngx_conf_merge_value(conf->gzip_vary, prev->gzip_vary, 0);
+ngx_http_core_module.c:    ngx_conf_merge_uint_value(conf->gzip_http_version, prev->gzip_http_version,
+ngx_http_core_module.c:    ngx_conf_merge_bitmask_value(conf->gzip_proxied, prev->gzip_proxied,
+ngx_http_core_module.c:    ngx_conf_merge_ptr_value(conf->gzip_disable, prev->gzip_disable, NULL);
+ngx_http_core_module.c:            (prev->gzip_disable_msie6 == 3) ? 0 : prev->gzip_disable_msie6;
+ngx_http_core_module.c:            (prev->gzip_disable_degradation == 3) ?
+ngx_http_core_module.c:                 0 : prev->gzip_disable_degradation;
+ngx_http_core_module.c:    ngx_conf_merge_uint_value(conf->disable_symlinks, prev->disable_symlinks,
+ngx_http_core_module.c:                             prev->disable_symlinks_from, NULL);
+ngx_http_request_body.c:    ngx_log_debug0(NGX_LOG_DEBUG_HTTP, rev->log, 0, "http set discard body");
+ngx_http_request_body.c:    if (rev->timer_set) {
+ngx_http_request_body.c:    if (rev->timedout) {
+ngx_http_request.c:    rev->handler = ngx_http_wait_request_handler;
+ngx_http_request.c:        rev->handler = ngx_http_v2_init;
+ngx_http_request.c:        rev->handler = ngx_http_ssl_handshake;
+ngx_http_request.c:    if (rev->ready) {
+ngx_http_request.c:        rev->handler(rev);
+ngx_http_request.c:    c = rev->data;
+ngx_http_request.c:    if (rev->timedout) {
+ngx_http_request.c:        if (!rev->timer_set) {
+ngx_http_request.c:    rev->handler = ngx_http_process_request_line;
+ngx_http_request.c:    c = rev->data;
+ngx_http_request.c:    ngx_log_debug0(NGX_LOG_DEBUG_HTTP, rev->log, 0,
+ngx_http_request.c:    if (rev->timedout) {
+ngx_http_request.c:    ngx_log_debug1(NGX_LOG_DEBUG_HTTP, rev->log, 0, "http recv(): %z", n);
+ngx_http_request.c:            rev->ready = 0;
+ngx_http_request.c:            if (!rev->timer_set) {
+ngx_http_request.c:            ngx_log_debug1(NGX_LOG_DEBUG_HTTP, rev->log, 0,
+ngx_http_request.c:                if (!rev->timer_set) {
+ngx_http_request.c:        ngx_log_debug0(NGX_LOG_DEBUG_HTTP, rev->log, 0, "plain http");
+ngx_http_request.c:        rev->handler = ngx_http_wait_request_handler;
+ngx_http_request.c:    c = rev->data;
+ngx_http_request.c:    ngx_log_debug0(NGX_LOG_DEBUG_HTTP, rev->log, 0,
+ngx_http_request.c:    if (rev->timedout) {
+ngx_http_request.c:            rev->handler = ngx_http_process_request_headers;
+ngx_http_request.c:    c = rev->data;
+ngx_http_request.c:    ngx_log_debug0(NGX_LOG_DEBUG_HTTP, rev->log, 0,
+ngx_http_request.c:    if (rev->timedout) {
+ngx_http_request.c:    if (rev->ready) {
+ngx_http_request.c:        if (!rev->timer_set) {
+ngx_http_request.c:        if (!rev->pending_eof) {
+ngx_http_request.c:        rev->eof = 1;
+ngx_http_request.c:        err = rev->kq_errno;
+ngx_http_request.c:        if (!rev->pending_eof) {
+ngx_http_request.c:        rev->eof = 1;
+ngx_http_request.c:        rev->eof = 1;
+ngx_http_request.c:            rev->eof = 1;
+ngx_http_request.c:    if ((ngx_event_flags & NGX_USE_LEVEL_EVENT) && rev->active) {
+ngx_http_request.c:        rev->error = 1;
+ngx_http_request.c:        if (rev->timer_set) {
+ngx_http_request.c:        rev->handler = ngx_http_process_request_line;
+ngx_http_request.c:    rev->handler = ngx_http_keepalive_handler;
+ngx_http_request.c:    if (rev->ready) {
+ngx_http_request.c:    c = rev->data;
+ngx_http_request.c:    if (rev->timedout || c->close) {
+ngx_http_request.c:        if (rev->pending_eof) {
+ngx_http_request.c:            ngx_log_error(NGX_LOG_INFO, c->log, rev->kq_errno,
+ngx_http_request.c:    rev->handler = ngx_http_process_request_line;
+ngx_http_request.c:    rev->handler = ngx_http_lingering_close_handler;
+ngx_http_request.c:    if (rev->ready) {
+ngx_http_request.c:    c = rev->data;
+ngx_http_request.c:    if (rev->timedout || c->close) {
+ngx_http_request.c:    } while (rev->ready);
+ngx_http_upstream.c:    if (rev->timedout) {
+ngx_http_upstream.c:        if (rev->delayed) {
+ngx_http_upstream.c:        conf->hide_headers = prev->hide_headers;
+ngx_http_upstream.c:        conf->pass_headers = prev->pass_headers;
+ngx_http_upstream.c:        conf->hide_headers_hash = prev->hide_headers_hash;
+ngx_http_upstream.c:            conf->hide_headers = prev->hide_headers;
+ngx_http_upstream.c:            conf->pass_headers = prev->pass_headers;
+ngx_http_upstream.c:    if (prev->hide_headers_hash.buckets == NULL
+ngx_http_upstream.c:        && conf->hide_headers == prev->hide_headers
+ngx_http_upstream.c:        && conf->pass_headers == prev->pass_headers)
+ngx_http_upstream.c:        prev->hide_headers_hash = conf->hide_headers_hash;
